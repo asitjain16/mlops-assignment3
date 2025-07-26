@@ -273,6 +273,10 @@ def main():
     print(f"{'Model Size (KB)':<20} {unquant_size:<15.2f} {quant_size:<15.2f}")
     print("="*60)
     
+    # Save the quantized PyTorch model
+    torch.save(quantized_model.state_dict(), 'quantized_model.pth')
+    print(f"Quantized PyTorch model saved to quantized_model.pth")
+    
     print("\nQuantization pipeline completed successfully!")
 
 if __name__ == "__main__":
