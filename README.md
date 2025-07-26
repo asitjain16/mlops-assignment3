@@ -1,5 +1,8 @@
 # MLOps Assignment 3 - End-to-End MLOps Pipeline
 
+## CI/CD Pipeline Status
+This branch contains Docker and CI/CD implementation.
+
 ## Overview
 This project implements a complete MLOps pipeline with:
 - Linear Regression model training on California Housing dataset
