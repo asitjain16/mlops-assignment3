@@ -10,8 +10,8 @@ COPY requirements.txt .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy source code
-COPY src/ ./src/
+# Copy Python scripts
+COPY train.py predict.py ./
 
 # Copy models directory (will be created during CI)
 COPY models/ ./models/
@@ -20,4 +20,4 @@ COPY models/ ./models/
 ENV PYTHONPATH=/app
 
 # Default command
-CMD ["python", "src/predict.py"]
+CMD ["python", "predict.py"]
